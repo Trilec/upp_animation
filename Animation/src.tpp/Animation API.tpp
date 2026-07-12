@@ -1,0 +1,20 @@
+topic "Copyright (c) 2025 Curtis Edwards (DoDoBar). Originated May 2025. Animation APIAnimation is a move-only, control-bound animation handle. Setters configure the next run; Play commits that configuration into an immutable scheduled state.";
+[ $$0,0#00000000000000000000000000000000:Default]
+[{_ [s0; Construction: Animation animation(ctrl);]
+
+[s0; Configuration methods:]
+[* [s0; Duration(int ms) sets the duration of each leg. Values below one millisecond are treated safely at runtime.]
+[* [s0; Ease(Easing::Fn) selects the easing function.]
+[* [s0; Loop(int n) sets complete cycle count; -1 means infinite and finite values are at least one.]
+[* [s0; Yoyo(bool) adds a reverse leg to each cycle.]
+[* [s0; Delay(int ms) delays the first leg.]
+[* [s0; OnStart, OnFinish, OnCancel, and OnUpdate register lifecycle callbacks.]
+[* [s0; operator()(Function<bool(double)>) registers a per-frame callback. Returning false ends the run.]]
+
+[s0; Control methods:]
+[* [s0; Play commits the staged configuration. Calling Play while active replaces the current run silently.]
+[* [s0; Pause and Resume freeze and continue elapsed time.]
+[* [s0; Stop completes immediately and fires the finish callback.]
+[* [s0; Cancel aborts, fires the cancel callback, and preserves the forward progress snapshot.]
+[* [s0; Reset aborts silently, clears progress, and prepares fresh staging.]
+[* [s0; Replay starts the most recently committed configuration; new staged setters take priority.]]

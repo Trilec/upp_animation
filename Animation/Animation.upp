@@ -1,0 +1,15 @@
+// Copyright (c) 2025 Curtis Edwards (DoDoBar)
+// Originated: May 2025
+
+description "U++ Animation Engine (cubic-Bezier easing and helpers)\377";
+
+uses
+	Core,
+	CtrlLib;
+
+file
+	Animation.h,
+	Animation.cpp,
+	src.tpp,
+	srcdoc.tpp;
+

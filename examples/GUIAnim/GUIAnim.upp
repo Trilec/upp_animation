@@ -1,0 +1,18 @@
+// Copyright (c) 2025 Curtis Edwards (DoDoBar)
+// Originated: May 2025
+
+description "GUI demo for Animation\377";
+
+uses
+	Core,
+	CtrlLib,
+	Animation;
+
+file
+	main.cpp,
+	GUIAnim.cpp,
+	GUIAnim.h;
+
+mainconfig
+	"" = "";
+
